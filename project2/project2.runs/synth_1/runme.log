@@ -1,0 +1,43 @@
+
+*** Running vivado
+    with args -log total.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source total.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source total.tcl -notrace
+Command: synth_design -top total -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16544 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 385.352 ; gain = 99.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'total' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/total.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pid_top' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/pid_top.v:23]
+	Parameter temper_set bound to: 8'b01111111 
+INFO: [Synth 8-6157] synthesizing module 'Substracter' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/Substracter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Substracter' (1#1) [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/Substracter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pid_core' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/pid_core.v:23]
+	Parameter k0 bound to: 5 - type: integer 
+	Parameter k1 bound to: 1 - type: integer 
+	Parameter k2 bound to: 1 - type: integer 
+	Parameter C0 bound to: 0 - type: integer 
+ERROR: [Synth 8-439] module 'xbip_multadd_0' not found [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/pid_core.v:80]
+ERROR: [Synth 8-6156] failed synthesizing module 'pid_core' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/pid_core.v:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'pid_top' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/pid_top.v:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'total' [E:/STUDY/Xilinx/project3/project2/project2.srcs/sources_1/new/total.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 441.867 ; gain = 156.230
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  1 17:46:30 2020...
